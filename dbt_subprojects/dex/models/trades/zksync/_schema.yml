@@ -411,3 +411,22 @@ models:
           seed_file: ref('velocore_zksync_base_trades_seed')
           filter:
             version: 2
+
+  - name: holdstationswap_zksync_base_trades
+    meta:
+      blockchain: zksync
+      sector: dex
+      project: velocore
+      contributors: ShawnEdwards23
+    config:
+      tags: [ 'zksync', 'dex', 'trades', 'holdstationswap' ]
+    description: "holdstationswap zksync base trades"
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - tx_hash
+            - evt_index
+      - check_dex_base_trades_seed:
+          seed_file: ref('holdstationswap_zksync_base_trades_seed')
+          filter:
+            version: 1
