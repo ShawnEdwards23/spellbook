@@ -28,6 +28,7 @@
     , ref('velocore_v0_zksync_base_trades')
     , ref('velocore_v1_zksync_base_trades')
     , ref('velocore_v2_zksync_base_trades')
+    , ref('holdstationswap_zksync_base_trades')
 ] %}
 
 WITH base_union AS (
